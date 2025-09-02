@@ -16,17 +16,18 @@ function App() {
         setOnSearch(e.target.value);
     };
 
-const handleButtonClick = async () => {
-  try {
-    const response = await axios.get(`https://foodish-api.com/images/dessert/dessert10.jpg`);
-    const imageUrl = response.data;
-    console.log('Image URL:', imageUrl);
-    setOnButtonClick(true);
-    setIsImage(imageUrl);
-  } catch (error) {
-    console.error('Error fetching data:', (error as Error).message);
-  }
-}
+// comment this api call out for now as the api doesnt work
+// const handleButtonClick = async () => {
+//   try {
+//     const response = await axios.get(`https://foodish-api.com/api`);
+//     const imageUrl = response.data;
+//     console.log('Image URL:', imageUrl);
+//     setOnButtonClick(true);
+//     setIsImage(imageUrl);
+//   } catch (error) {
+//     console.error('Error fetching data:', (error as Error).message);
+//   }
+// }
 
   return (
     <div className="App">
@@ -36,9 +37,9 @@ const handleButtonClick = async () => {
         </h2>
       </header>
       <SwitchCase/>
-      <SearchInput handleSearch={handleSearch}/> 
-      <div><button className='enter-button' onClick={ handleButtonClick}>I'm hungry</button></div>
-       <ReturnedSummary/>
+      {/* <SearchInput handleSearch={handleSearch}/> 
+      <div><button className='enter-button' onClick={handleButtonClick}>I'm hungry</button></div>
+       <ReturnedSummary/> */}
     </div>
   );
 }

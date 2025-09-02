@@ -1,0 +1,16 @@
+#button-option:hover {
+    color: blue;
+    
+}
+#button-option {
+    cursor: pointer;
+    color: rgb(69, 69, 69);
+    margin: 0 10px;
+    transition: color 0.2s ease-in-out;
+    border-radius: 10px;
+    box-shadow: whitesmoke  0px 4px 6px -1px;
+}
+
+.button-styling {
+    border-color: rgb(215, 217, 250);   
+}
