@@ -1,0 +1,15 @@
+{ 
+    "dessert": {
+       "dessertUrl": "https://foodish-api.com/images/dessert/dessert10.jpg"
+    },
+    "burger": {
+       "burgerUrl": "https://foodish-api.com/images/burger/burger26.jpg"
+    },
+    "pasta": {
+       "pastaUrl": "https://foodish-api.com/images/pasta/pasta6.jpg"
+    },
+    "pizza": {
+       "pizzaUrl": "https://foodish-api.com/images/pizza/pizza6.jpg"
+    }
+
+}

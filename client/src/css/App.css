@@ -1,0 +1,30 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh; /* Ensures the App takes the full height of the viewport */
+  display: flex; /* Centers content vertically and horizontally */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Search-input {
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.Search-input input {
+  width: 100%; /* Ensures the input takes the full width of the container */
+  height: 30px;
+  font-size: 16px;
+  padding: 5px;
+  border: 1px solid #ccc; /* Adds a visible border */
+  border-radius: 4px; /* Optional: Adds rounded corners */
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+#header-text {
+  color: #ffffff;
+  transition: height 0.2s ease-in-out;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
