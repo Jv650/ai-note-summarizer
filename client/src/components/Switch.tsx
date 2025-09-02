@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import urls from "../components/foodUrls.json";
+import '../css/Switch.css';
 
 
 const SwitchCase = () => {
@@ -28,15 +29,16 @@ switch(food) {
 }
 return (
     <div>
-        <button onClick={() => handleFoodSelection('pasta')}>Pasta</button>
-        <button onClick={() => handleFoodSelection('dessert')}>Dessert</button>
-        <button onClick={() => handleFoodSelection('pizza')}>Pizza</button>
-        <button onClick={() => handleFoodSelection('burger')}>Burger</button>
-
+        <div className='button-styling'>
+        <button id='button-option' onClick={() => handleFoodSelection('pasta')}>Pasta</button>
+        <button id='button-option' onClick={() => handleFoodSelection('dessert')}>Dessert</button>
+        <button id='button-option' onClick={() => handleFoodSelection('pizza')}>Pizza</button>
+        <button id='button-option' onClick={() => handleFoodSelection('burger')}>Burger</button>
+        </div>
         {isFoodUrl && (
             <div>
-                <h3 style={{color: 'white'}}>{selectedFood.charAt(0).toUpperCase() + selectedFood.slice(1)}</h3>
-                <img src={isFoodUrl} alt={selectedFood} style={{width: '300px', height: '200px'}}/>
+                {/* <h3 style={{color: 'white'}}>{selectedFood.charAt(0).toUpperCase() + selectedFood.slice(1)}</h3> */}
+                <img src={isFoodUrl} alt={selectedFood} style={{width: '300px', height: '200px', marginTop:'50px'}}/>
             </div>
         )}
     </div>
