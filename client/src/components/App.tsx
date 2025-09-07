@@ -30,16 +30,16 @@ function App() {
 // }
 
   return (
-    <div className="App">
+  <div className="App">
       <header className="App-header">
         <h2 id='header-text'>
           Find something to munch on.
         </h2>
       </header>
-      <SwitchCase/>
-      {/* <SearchInput handleSearch={handleSearch}/> 
-      <div><button className='enter-button' onClick={handleButtonClick}>I'm hungry</button></div>
-       <ReturnedSummary/> */}
+      <SwitchCase />
+      {/* <SearchInput handleSearch={handleSearch}/>
+    <div><button className='enter-button' onClick={handleButtonClick}>I'm hungry</button></div>
+     <ReturnedSummary/> */}
     </div>
   );
 }

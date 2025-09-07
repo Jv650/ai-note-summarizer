@@ -6,9 +6,11 @@ import '../css/Switch.css';
 const SwitchCase = () => {
 const [isFoodUrl, setIsFoodUrl] = useState<string>("");
 const [selectedFood, setSelectedFood] = useState<string>("");
+const [isClearSelection, setIsClearSelection] = useState<boolean>(false);
 
 const handleFoodSelection = (food: string) => {
     setSelectedFood(food);
+    setIsClearSelection(true);
     
 switch(food) {
     case "pasta":
@@ -27,21 +29,36 @@ switch(food) {
         setIsFoodUrl("");
 }
 }
+
+const handleClearSelection = () => {
+        setSelectedFood('');
+        setIsFoodUrl('');
+        setIsClearSelection(false);
+
+};
 return (
+    
     <div>
         <div className='button-styling'>
-        <button id='button-option' onClick={() => handleFoodSelection('pasta')}>Pasta</button>
-        <button id='button-option' onClick={() => handleFoodSelection('dessert')}>Dessert</button>
-        <button id='button-option' onClick={() => handleFoodSelection('pizza')}>Pizza</button>
-        <button id='button-option' onClick={() => handleFoodSelection('burger')}>Burger</button>
+            <button id='button-option' onClick={() => handleFoodSelection('pasta')}>Pasta</button>
+            <button id='button-option' onClick={() => handleFoodSelection('dessert')}>Dessert</button>
+            <button id='button-option' onClick={() => handleFoodSelection('pizza')}>Pizza</button>
+            <button id='button-option' onClick={() => handleFoodSelection('burger')}>Burger</button>
         </div>
         {isFoodUrl && (
+            <>
             <div>
-                {/* <h3 style={{color: 'white'}}>{selectedFood.charAt(0).toUpperCase() + selectedFood.slice(1)}</h3> */}
-                <img src={isFoodUrl} alt={selectedFood} style={{width: '300px', height: '200px', marginTop:'50px'}}/>
-            </div>
+                    {/* <h3 style={{color: 'white'}}>{selectedFood.charAt(0).toUpperCase() + selectedFood.slice(1)}</h3> */}
+                    <img src={isFoodUrl} alt={selectedFood} style={{ width: '300px', height: '200px', marginTop: '50px' }} />
+                </div>
+                <br/>
+                <div>
+                        <button onClick={handleClearSelection} className="clear-selection">Clear selection</button>
+                    </div>
+                    </>
         )}
     </div>
+  
 );
 }
 export default SwitchCase;
